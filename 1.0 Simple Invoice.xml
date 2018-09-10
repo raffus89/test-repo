@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Invoice	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" 
+					xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" 
+					xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+	<!-- Header -->
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0</cbc:CustomizationID>
+  <cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+	<cbc:ID>20180725-001/SI</cbc:ID>
+	<cbc:IssueDate>2018-07-25</cbc:IssueDate>
+	<cbc:InvoiceTypeCode listID="UNCL1001">380</cbc:InvoiceTypeCode>
+	<cbc:DocumentCurrencyCode listID="ISO4217">EUR</cbc:DocumentCurrencyCode>
+	<cac:OrderReference>
+		<cbc:ID>123</cbc:ID>
+	</cac:OrderReference>
+	<!-- Supplier -->
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="GLN">7315567125084</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="BE:CBE">0887442805</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>GS1 Belgium Luxembourg</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Koningsstraat 76</cbc:StreetName>
+				<cbc:CityName>Brussel</cbc:CityName>
+				<cbc:PostalZone>1000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="BE:VAT">BE0887442805</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>GS1 Belgium - Luxembourg</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="BE:CBE">0887442805</cbc:CompanyID>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:ElectronicMail>dummy@gs1belu.org</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<!-- Customer -->
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeID="BE:CBE">0671516647</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>BOSA DT</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>Simon Bolivarlaan 30</cbc:StreetName>
+        <cbc:CityName>Brussels</cbc:CityName>
+        <cbc:PostalZone>1000</cbc:PostalZone>
+        <cac:Country>
+          <cbc:IdentificationCode listID="ISO3166-1:Alpha2">BE</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID schemeID="BE:VAT">BE0671516647</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>BOSA DT</cbc:RegistrationName>
+        <cbc:CompanyID schemeID="BE:CBE">0671516647</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:ElectronicMail>dummy@bosa.fgov.be</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <!-- Payment -->
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode listID="UNCL4461">42</cbc:PaymentMeansCode>
+    <cbc:PaymentDueDate>2018-02-25</cbc:PaymentDueDate>
+    <cbc:PaymentChannelCode>IBAN</cbc:PaymentChannelCode>
+    <cbc:PaymentID>some reference</cbc:PaymentID>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID schemeID="IBAN">BE12345678912345</cbc:ID>
+      <cac:FinancialInstitutionBranch>
+        <cac:FinancialInstitution>
+          <cbc:ID schemeID="BIC">GEBABEBB</cbc:ID>
+        </cac:FinancialInstitution>
+      </cac:FinancialInstitutionBranch>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <!-- TaxTotal -->
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="EUR">516.00</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="EUR">200.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="EUR">12.00</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+        <cbc:Percent>6.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>	
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="EUR">2400.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="EUR">504.00</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+        <cbc:Percent>21.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <!-- LegalMonetaryTotal -->
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="EUR">2600.00</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="EUR">2600.00</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="EUR">3116.00</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="EUR">3116.00</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+	<!-- InvoiceLine(s) / Article(s) -->  
+    <cac:InvoiceLine>
+      <cbc:ID>1</cbc:ID>
+      <cbc:InvoicedQuantity unitCode="C62" unitCodeListID="UNECERec20">10.00</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="EUR">200.00</cbc:LineExtensionAmount>
+      <cac:Item>
+        <cbc:Description>Levering goed X</cbc:Description>
+        <cbc:Name>goed X</cbc:Name>
+				<cac:StandardItemIdentification>
+					<cbc:ID schemeID="GTIN">05401234567890</cbc:ID>
+				</cac:StandardItemIdentification>
+        <cac:ClassifiedTaxCategory>
+          <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+          <cbc:Percent>6</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>VAT</cbc:ID>
+          </cac:TaxScheme>
+        </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="EUR">20.00</cbc:PriceAmount>
+        <cbc:BaseQuantity>1.00</cbc:BaseQuantity>
+      </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+      <cbc:ID>2</cbc:ID>
+      <cbc:InvoicedQuantity unitCode="C62" unitCodeListID="UNECERec20">40.00</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="EUR">2400.00</cbc:LineExtensionAmount>
+      <cac:Item>
+        <cbc:Description>Levering goed Y</cbc:Description>
+        <cbc:Name>goed Y</cbc:Name>
+				<cac:StandardItemIdentification>
+					<cbc:ID schemeID="GTIN">05401234567890</cbc:ID>
+				</cac:StandardItemIdentification>
+        <cac:ClassifiedTaxCategory>
+          <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+          <cbc:Percent>21</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>VAT</cbc:ID>
+          </cac:TaxScheme>
+        </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="EUR">60.00</cbc:PriceAmount>
+        <cbc:BaseQuantity>1.00</cbc:BaseQuantity>
+      </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>
